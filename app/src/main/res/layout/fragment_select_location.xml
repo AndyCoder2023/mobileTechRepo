@@ -9,7 +9,7 @@
         android:id="@+id/textView5"
         android:layout_width="243dp"
         android:layout_height="26dp"
-        android:text="Please confirm the location you want"
+        android:text="@string/please_confirm_the_location_you_want"
         tools:layout_editor_absoluteX="263dp"
         tools:layout_editor_absoluteY="390dp" />
 
@@ -17,7 +17,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aberdeen, UK"
+        android:text="@string/aberdeen_uk"
         tools:layout_editor_absoluteX="258dp"
         tools:layout_editor_absoluteY="461dp" />
 
@@ -25,7 +25,7 @@
         android:id="@+id/button2"
         android:layout_width="270dp"
         android:layout_height="39dp"
-        android:text="GET FORECAST"
+        android:text="@string/get_forecast"
         tools:layout_editor_absoluteX="253dp"
         tools:layout_editor_absoluteY="514dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

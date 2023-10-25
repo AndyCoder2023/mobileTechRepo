@@ -49,4 +49,7 @@
     <string name="button3" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_confirm_the_location_you_want">Please confirm the location you want</string>
+    <string name="get_forecast">GET FORECAST</string>
+    <string name="aberdeen_uk">Aberdeen, UK</string>
 </resources>
