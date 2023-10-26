@@ -52,4 +52,10 @@
     <string name="please_confirm_the_location_you_want">Please confirm the location you want</string>
     <string name="get_forecast">GET FORECAST</string>
     <string name="aberdeen_uk">Aberdeen, UK</string>
+    <string name="enter_a_location">Enter a location</string>
+    <string name="how_many_days_in_the_future_would_you_like_the_forecast_for">How many days in the future would you like the forecast for?</string>
+    <string name="location_name">location name</string>
+    <string name="_1">1</string>
+    <string name="get_the_forecast_for_your_current_location">Get the forecast for your current location</string>
+    <string name="current_location_forecast">CURRENT LOCATION FORECAST</string>
 </resources>
