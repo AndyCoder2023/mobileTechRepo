@@ -5,7 +5,7 @@ package com.example.mobiletech.data;
  */
 public class HourForecast {
 
-    // the forecasted temp in degress celcius
+    // the forecasted temp in degrees celcius
     private int temperature;
 
     // the forecasted humidity in % (between 0 and 100)
