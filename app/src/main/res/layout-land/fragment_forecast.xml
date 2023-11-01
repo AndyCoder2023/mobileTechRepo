@@ -3,58 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ForecastFragment">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvForecastLabel"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/tvForecastLabel"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="711dp"
+        android:layout_height="262dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnShowForecast"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvForecastLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnShareForecast"
+        android:id="@+id/btnShowLocationMapLandscape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnShareForecast"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnCheckForecastOnline" />
+        android:text="@string/btnShowLocationMapLandscape"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="334dp" />
 
     <Button
-        android:id="@+id/btnCheckForecastOnline"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/btnCheckForecastOnline"
-        app:layout_constraintBottom_toTopOf="@+id/btnShareForecast"
-        app:layout_constraintStart_toStartOf="@+id/btnShowForecast" />
+        android:text="Button"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="332dp" />
 
     <Button
-        android:id="@+id/btnShowForecast"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/btnShowLocationMap"
-        app:layout_constraintBottom_toTopOf="@+id/btnCheckForecastOnline"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView" />
+        android:text="Button"
+        tools:layout_editor_absoluteX="493dp"
+        tools:layout_editor_absoluteY="333dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
