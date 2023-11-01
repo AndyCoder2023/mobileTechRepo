@@ -7,21 +7,21 @@
     tools:context=".SelectLocationFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvEnterLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="43dp"
-        android:text="@string/enter_a_location"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        android:text="enter_a_location"
+        app:layout_constraintBottom_toTopOf="@+id/tvHowManyDays"
+        app:layout_constraintEnd_toStartOf="@+id/etLocationName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvHowManyDays"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -29,75 +29,77 @@
         android:layout_marginBottom="103dp"
         android:text="@string/how_many_days_in_the_future_would_you_like_the_forecast_for"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetForecast"
+        app:layout_constraintEnd_toStartOf="@+id/etForecastDaysInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEnterLocation" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etLocationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="74dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
-        android:text="@string/location_name"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        android:minHeight="48dp"
+        android:text="location_name"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEnterLocation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/tvEnterLocation"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints=""
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/etForecastDaysInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="22dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
-        android:text="@string/_1"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:minHeight="48dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHowManyDays"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        android:autofillHints=""
+        app:layout_constraintStart_toEndOf="@+id/tvHowManyDays"
+        app:layout_constraintTop_toTopOf="@+id/tvHowManyDays"
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnGetForecast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="57dp"
-        android:text="GET FORECAST"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:text="@string/get_forecast"
+        app:layout_constraintBottom_toTopOf="@+id/tvForecastCurrentLocation"
+        app:layout_constraintEnd_toEndOf="@+id/tvForecastCurrentLocation"
+        app:layout_constraintStart_toStartOf="@+id/tvForecastCurrentLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvHowManyDays" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvForecastCurrentLocation"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="92dp"
         android:text="@string/get_the_forecast_for_your_current_location"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnCurrentLocationForecast"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGetForecast" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCurrentLocationForecast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
         android:text="@string/current_location_forecast"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/tvForecastCurrentLocation"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/tvForecastCurrentLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvForecastCurrentLocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
