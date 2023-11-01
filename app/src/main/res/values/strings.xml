@@ -43,19 +43,25 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="button2">Button2</string>
-    <string name="button">Button</string>
-    <string name="testWindow" />
-    <string name="button3" />
+<!--    <string name="button2">Button2</string>-->
+<!--    <string name="button">Button</string>-->
+<!--    <string name="testWindow" />-->
+<!--    <string name="button3" />-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+<!--  Fragment Location Confirmation Strings  -->
     <string name="tvEnterLocation">Enter a location</string>
     <string name="tvHowManyDays">How many days in the future would you like the forecast for</string>
-    <string name="etLocationName"></string>
-    <string name="etForecastDaysInput"></string>
-    <string name="btnGetForecast"></string>
-    <string name="tvForecastCurrentLocation"></string>
-    <string name="btnCurrentLocationForecast"></string>
+    <string name="etLocationName">Location name</string>
+    <string name="etForecastDaysInput">1</string>
+    <string name="btnGetForecast">Get forecast</string>
+    <string name="tvForecastCurrentLocation">Get the forecast for your current location</string>
+    <string name="btnCurrentLocationForecast">Current location forecast</string>
+
+<!--  fragment location confirmation  -->
+    <string name="tvConfirmLocationLabel">Please confirm the location you want from the options below</string>
+    <string name="btnGetForecastLocationConfirm">GET FORECAST</string>
+
 
 </resources>
