@@ -80,4 +80,14 @@
     <string name="btnCheckForecastOnlineLandscape">Check forecast online</string>
     <string name="btnShareForecastLandscape">Share forecast</string>
 
+<!--  Settings Fragment  -->
+    <string name="tvSettings">Settings</string>
+    <string name="spSettingsUnits">Display temperature in</string>
+    <string name="btnSaveSettings">Store</string>
+    <string-array name="spSettingsUnitsOptions">
+        <item>Celcius</item>
+        <item>Farenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
 </resources>
