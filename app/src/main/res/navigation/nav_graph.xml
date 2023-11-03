@@ -6,17 +6,43 @@
     app:startDestination="@id/selectLocationFragment">
     <fragment
         android:id="@+id/selectLocationFragment"
-        android:name="com.example.mobiletech.SelectLocationFragment"
+        android:name="com.example.mobiletech.LocationSelectionFragment"
         android:label="fragment_select_location"
-        tools:layout="@layout/fragment_select_location" />
+        tools:layout="@layout/fragment_select_location" >
+        <action
+            android:id="@+id/action_selectLocationFragment_to_locationConfirmationFragment"
+            app:destination="@id/locationConfirmationFragment" />
+        <action
+            android:id="@+id/action_selectLocationFragment_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+        <action
+            android:id="@+id/action_selectLocationFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/forecastFragment"
         android:name="com.example.mobiletech.ForecastFragment"
         android:label="fragment_forecast"
-        tools:layout="@layout/fragment_forecast" />
+        tools:layout="@layout/fragment_forecast" >
+        <action
+            android:id="@+id/action_forecastFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.mobiletech.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/locationConfirmationFragment"
+        android:name="com.example.mobiletech.LocationConfirmationFragment"
+        android:label="fragment_location_confirmation"
+        tools:layout="@layout/fragment_location_confirmation" >
+        <action
+            android:id="@+id/action_locationConfirmationFragment_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+        <action
+            android:id="@+id/action_locationConfirmationFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
 </navigation>

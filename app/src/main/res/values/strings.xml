@@ -45,7 +45,7 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 
-<!--  Fragment Location Confirmation page Strings  -->
+<!--  Fragment Select Location page Strings  -->
     <string name="tvEnterLocation">Enter a location</string>
     <string name="tvHowManyDays">How many days in the future would you like the forecast for</string>
     <string name="etLocationName">Location name</string>
@@ -80,7 +80,7 @@
     <string name="btnCheckForecastOnlineLandscape">Check forecast online</string>
     <string name="btnShareForecastLandscape">Share forecast</string>
 
-<!--  Settings Fragment  -->
+<!--  Settings Fragment page Strings -->
     <string name="tvSettings">Settings</string>
     <string name="spSettingsUnits">Display temperature in</string>
     <string name="btnSaveSettings">Store</string>
@@ -89,5 +89,7 @@
         <item>Farenheit</item>
         <item>Kelvin</item>
     </string-array>
+
+
 
 </resources>
