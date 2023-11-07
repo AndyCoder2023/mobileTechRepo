@@ -90,6 +90,7 @@
         <item>Kelvin</item>
     </string-array>
 
-
+<!-- Menu Items -->
+<string name="mi_appBarSettings">Settings</string>
 
 </resources>
