@@ -15,10 +15,10 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LocationSelectionFragment#newInstance} factory method to
+ * Use the {@link selectLocationFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LocationSelectionFragment extends Fragment implements View.OnClickListener {
+public class selectLocationFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +29,7 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
     private String mParam1;
     private String mParam2;
 
-    public LocationSelectionFragment() {
+    public selectLocationFragment() {
         // Required empty public constructor
     }
 
@@ -42,8 +42,8 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
      * @return A new instance of fragment SelectLocationFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LocationSelectionFragment newInstance(String param1, String param2) {
-        LocationSelectionFragment fragment = new LocationSelectionFragment();
+    public static selectLocationFragment newInstance(String param1, String param2) {
+        selectLocationFragment fragment = new selectLocationFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -76,7 +76,7 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
         getForecastButton.setOnClickListener(this);
 
         //    for navigating to the ForecastFragment
-        Button gpsForecastButton = getView().findViewById(R.id.);
+        Button gpsForecastButton = getView().findViewById(R.id.btnGpsForecast);
         gpsForecastButton.setOnClickListener(this);
     }
 

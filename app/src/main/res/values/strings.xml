@@ -52,7 +52,7 @@
     <string name="etForecastDaysInput">1</string>
     <string name="btnGetForecast">Get forecast</string>
     <string name="tvForecastCurrentLocation">Get the forecast for your current location</string>
-    <string name="btnCurrentLocationForecast">Current location forecast</string>
+    <string name="btnGpsForecast">Get forecast for here</string>
 
 <!--  fragment location confirmation page Strings  -->
     <string name="tvConfirmLocationLabel">Please confirm the location you want from the options below</string>
