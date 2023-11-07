@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-//    todo: fix this code
+//    todo: fix this code, video point at 13:40
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 //        handle settings item selection
