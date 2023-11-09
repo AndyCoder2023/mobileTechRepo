@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/tvHowManyDays"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="103dp"
@@ -81,7 +81,7 @@
     <TextView
         android:id="@+id/tvForecastCurrentLocation"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="92dp"
