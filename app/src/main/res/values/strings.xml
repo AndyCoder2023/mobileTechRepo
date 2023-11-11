@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">mobileTech</string>
+    <string name="app_name">MobileDevWeatherApp</string>
+    <string name="messages_header" />
+    <string name="signature_title" />
+    <string name="reply_title" />
+    <string name="sync_header" />
+    <string name="sync_title" />
+    <string name="attachment_title" />
+    <string name="app_label" />
+    <string name="search_hint" />
+
     <string name="title_activity_main">MainActivity</string>
 
     <!-- Strings used for fragments for navigation -->
