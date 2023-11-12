@@ -102,4 +102,8 @@
 <!-- Menu Items -->
 <string name="mi_appBarSettings">Settings</string>
 
+<!--  Bottom bar menu items Strings  -->
+    <string name="mi_bottomNavHome">Home</string>
+    <string name="mi_bottomNavSettings">Settings</string>
+
 </resources>
