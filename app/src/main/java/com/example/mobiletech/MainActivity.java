@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import com.example.mobiletech.data.HourForecast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 //        Create some sample data
         HourForecast hf = new HourForecast();
         hf.setTemperature(32);
-
     }
 
     //    TODO: Menu bar not appearing
@@ -36,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         // handle settings item selection
-        if  (item.getItemId() == R.id.mi_appBarSetting) {
+        if  (item.getItemId() == R.id.mi_appBarHome) {
             NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
             // work out where the user currently is
             int currentFragmentId = navController.getCurrentDestination().getId();
             // if that is different from the settings fragment
-            if (currentFragmentId != R.id.settingsFragment) {
-                navController.navigate(R.id.settingsFragment);
+            if (currentFragmentId != R.id.selectLocationFragment) {
+                navController.navigate(R.id.selectLocationFragment);
                 return true;
             }
         }
@@ -50,25 +49,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
         //    Bottom Navigation
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
-            // work out where the user currently is
-            int currentFragmentId = navController.getCurrentDestination().getId();
-
-            if (item.getItemId() == R.id.mi_bottomNavSettings) {
-                // navigate "home" to the location select fragment
-                if (currentFragmentId != R.id.selectLocationFragment) {
-                    navController.navigate(R.id.selectLocationFragment);
-                    return true;
-                }
-            } else if (item.getItemId() == R.id.mi_bottomNavSettings){
-                // navigate to settings fragment
-                if (currentFragmentId != R.id.settingsFragment){
-                    navController.navigate(R.id.settingsFragment);
-                    return true;
-                }
-
-            }
-            return false;
-        }
-}
+//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//            NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
+//            // work out where the user currently is
+//            int currentFragmentId = navController.getCurrentDestination().getId();
+//
+//            if (item.getItemId() == R.id.mi_bottomNavSettings) {
+//                // navigate "home" to the location select fragment
+//                if (currentFragmentId != R.id.selectLocationFragment) {
+//                    navController.navigate(R.id.selectLocationFragment);
+//                    return true;
+//                }
+//            } else if (item.getItemId() == R.id.mi_bottomNavSettings){
+//                // navigate to settings fragment
+//                if (currentFragmentId != R.id.settingsFragment){
+//                    navController.navigate(R.id.settingsFragment);
+//                    return true;
+//                }
+//
+//            }
+//            return false;
+//        }
+    }

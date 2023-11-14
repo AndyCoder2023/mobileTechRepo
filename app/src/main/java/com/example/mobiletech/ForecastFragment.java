@@ -2,11 +2,25 @@ package com.example.mobiletech;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +28,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ForecastFragment extends Fragment {
+
+//    Tag for logging messages
+    private static final String TAG = "ForecastFragment";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +77,41 @@ public class ForecastFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_forecast, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        downloadForecast();
+    }
+//    Method creates URL
+
+    private void downloadForecast() {
+        String url = "https://api.weatherapi.com/v1/forecast.json?key=a3b9cc3fb35943d5826152257210311 &q=Aberdeen&days=3";
+
+        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, response);
+                try {
+//                    Convert text response to a JSON object for processing
+                    JSONObject rootObj = new JSONObject(response);
+                } catch (JSONException e) {
+                    Toast.makeText(getContext(), R.string.error_parsing_forecast, Toast.LENGTH_LONG );
+                    Log.e(TAG, "Parsing JSON" + e.getLocalizedMessage());
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), R.string.error_downloading_forecast, Toast.LENGTH_LONG );
+                Log.e(TAG, error.getLocalizedMessage());
+            }
+        });
+//        Create a new RequestQueue
+        RequestQueue rq = Volley.newRequestQueue(getContext());
+//        add the request to make it
+        rq.add(request);
     }
 }

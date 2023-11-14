@@ -64,7 +64,7 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_select_location, container, false);
+        return inflater.inflate(R.layout.fragment_location_selection, container, false);
     }
 
     @Override
@@ -84,11 +84,12 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
     public void onClick(View view) {
 //        Get the nav controller
         NavController navController = Navigation.findNavController(view);
-
+// TODO: App crashes when clicking the buttons down below
 //            TODO: Get the number of days to get the forecast for
         if (view.getId() == R.id.btnGetForecast) {
 //            Navigate to the LocationConfirmationFragment
             navController.navigate(R.id.action_selectLocationFragment_to_locationConfirmationFragment);
+
     } else if (view.getId() == R.id.btnGpsForecast) {
 //        TODO: Get the location from GPS
 //        Navigate to the Forecast Fragment

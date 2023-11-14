@@ -68,7 +68,6 @@
     <string name="btnGetForecastLocationConfirm">GET FORECAST</string>
 
 <!--  hour forecast list item page Strings  -->
-
     <string name="tvForecastDate">30 Sept</string>
     <string name="tvForecastTime">10:00</string>
     <string name="tvForecastTemp">10C</string>
@@ -83,7 +82,6 @@
     <string name="btnShareForecast">Share forecast</string>
 
 <!--  Fragment Forecast page Landscape Strings  -->
-
     <string name="tvForecastLabelLandscape">Forecast For Aberdeen, UK</string>
     <string name="btnShowLocationMapLandscape">Show on map</string>
     <string name="btnCheckForecastOnlineLandscape">Check forecast online</string>
@@ -100,10 +98,13 @@
     </string-array>
 
 <!-- Menu Items -->
-<string name="mi_appBarSettings">Settings</string>
+    <string name="mi_appBarHome">Home</string>
+    <string name="mi_appBarSettings">Settings</string>
 
 <!--  Bottom bar menu items Strings  -->
     <string name="mi_bottomNavHome">Home</string>
     <string name="mi_bottomNavSettings">Settings</string>
+    <string name="error_parsing_forecast">Error parsing the weather forecast</string>
+    <string name="error_downloading_forecast">Error parsing the weather forecast</string>
 
 </resources>
