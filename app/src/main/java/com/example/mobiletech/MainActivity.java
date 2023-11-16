@@ -6,6 +6,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("main", "doing create stuff");
 
 //        Create some sample data
         HourForecast hf = new HourForecast();
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     //    TODO: Menu bar not appearing
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d("main", "doing menu stuff");
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.app_bar_menu, menu);
         return true;
@@ -49,4 +52,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+
 }
