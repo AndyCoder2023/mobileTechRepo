@@ -45,8 +45,4 @@
             android:id="@+id/action_locationConfirmationFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
     </fragment>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.mobiletech.MainActivity"
-        android:label="MainActivity" />
 </navigation>

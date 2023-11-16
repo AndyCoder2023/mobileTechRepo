@@ -11,9 +11,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.mobiletech.data.HourForecast;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,42 +31,22 @@ public class MainActivity extends AppCompatActivity  {
         return true;
     }
 
+    //    todo: fix this code, video point at 13:40
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        // handle settings item selection
-        if  (item.getItemId() == R.id.mi_appBarHome) {
+//        handle settings item selection
+        if (item.getItemId() == R.id.mi_appBarSetting) {
             NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
-            // work out where the user currently is
+//            Work out where the user currently is
             int currentFragmentId = navController.getCurrentDestination().getId();
-            // if that is different from the settings fragment
-            if (currentFragmentId != R.id.selectLocationFragment) {
-                navController.navigate(R.id.selectLocationFragment);
+//            If that is different from the settings fragment
+            if (currentFragmentId != R.id.settingsFragment) {
+                navController.navigate(R.id.settingsFragment);
                 return true;
+            } else {
+                return super.onOptionsItemSelected(item);
             }
         }
-        return super.onOptionsItemSelected(item);
+        return false;
     }
-
-        //    Bottom Navigation
-//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            NavController navController = Navigation.findNavController(findViewById(R.id.fragmentContainerView));
-//            // work out where the user currently is
-//            int currentFragmentId = navController.getCurrentDestination().getId();
-//
-//            if (item.getItemId() == R.id.mi_bottomNavSettings) {
-//                // navigate "home" to the location select fragment
-//                if (currentFragmentId != R.id.selectLocationFragment) {
-//                    navController.navigate(R.id.selectLocationFragment);
-//                    return true;
-//                }
-//            } else if (item.getItemId() == R.id.mi_bottomNavSettings){
-//                // navigate to settings fragment
-//                if (currentFragmentId != R.id.settingsFragment){
-//                    navController.navigate(R.id.settingsFragment);
-//                    return true;
-//                }
-//
-//            }
-//            return false;
-//        }
-    }
+}

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,28 +73,33 @@ public class LocationSelectionFragment extends Fragment implements View.OnClickL
         super.onViewCreated(view, savedInstanceState);
 
         //    for navigating to the LocationSelectionFragment
-        Button getForecastButton = getView().findViewById(R.id.btnGetForecast);
+        Button getForecastButton = view.findViewById(R.id.btnGetForecast);
         getForecastButton.setOnClickListener(this);
 
         //    for navigating to the ForecastFragment
-        Button gpsForecastButton = getView().findViewById(R.id.btnGpsForecast);
+        Button gpsForecastButton = view.findViewById(R.id.btnGpsForecast);
         gpsForecastButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
 //        Get the nav controller
+        Log.d("Help", "I'm clicking");
         NavController navController = Navigation.findNavController(view);
+        if (navController != null) {
+            // Your navigation logic
+
 // TODO: App crashes when clicking the buttons down below
 //            TODO: Get the number of days to get the forecast for
-        if (view.getId() == R.id.btnGetForecast) {
+            if (view.getId() == R.id.btnGetForecast) {
 //            Navigate to the LocationConfirmationFragment
-            navController.navigate(R.id.action_selectLocationFragment_to_locationConfirmationFragment);
+                navController.navigate(R.id.action_selectLocationFragment_to_locationConfirmationFragment);
 
-    } else if (view.getId() == R.id.btnGpsForecast) {
+            } else if (view.getId() == R.id.btnGpsForecast) {
 //        TODO: Get the location from GPS
 //        Navigate to the Forecast Fragment
-        navController.navigate(R.id.action_selectLocationFragment_to_forecastFragment);
+                navController.navigate(R.id.action_selectLocationFragment_to_forecastFragment);
             }
         }
+      }
     }
