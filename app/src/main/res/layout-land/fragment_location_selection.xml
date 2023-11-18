@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvEnterLocation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:text="@string/tvEnterLocation"
+        app:layout_constraintBottom_toTopOf="@+id/tvHowManyDays2"
+        app:layout_constraintEnd_toEndOf="@+id/tvHowManyDays2"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvHowManyDays2"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/tvHowManyDays"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetForecast2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <EditText
+        android:id="@+id/etLocationName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/etLocationName"
+        app:layout_constraintBottom_toTopOf="@+id/etForecastDaysInput2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/tvEnterLocation2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/etForecastDaysInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="128dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/etForecastDaysInput"
+        app:layout_constraintBottom_toTopOf="@+id/tvForecastCurrentLocation2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvHowManyDays2"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btnGetForecast2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="@string/btnGetForecast"
+        app:layout_constraintBottom_toTopOf="@+id/tvForecastCurrentLocation2"
+        app:layout_constraintEnd_toEndOf="@+id/tvHowManyDays2"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvForecastCurrentLocation2"
+        android:layout_width="707dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/tvForecastCurrentLocation"
+        app:layout_constraintBottom_toTopOf="@+id/btnGpsForecast2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGpsForecast2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnGpsForecast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
