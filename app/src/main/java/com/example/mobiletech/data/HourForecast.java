@@ -20,6 +20,17 @@ public class HourForecast {
     // the weather description
     private String weather;
 
+    //    the weather description
+    private String iconURL;
+
+    public String getIconURL() {
+        return iconURL;
+    }
+
+    public void setIconURL(String iconURL) {
+        this.iconURL = iconURL;
+    }
+
     /**
      * Default constructor
      */
